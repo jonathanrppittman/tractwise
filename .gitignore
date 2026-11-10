@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Data and generated outputs
+outputs/
+data/
+!src/tractwise/data/
+*.trk
+*.tck
+*.mp4
+*.gif

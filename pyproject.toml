@@ -1,0 +1,33 @@
+[project]
+name = "tractwise"
+version = "0.1.0"
+description = "Uncertainty-aware deep-ensemble classification of tractography streamlines into white matter bundles"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dipy>=1.12.1",
+    "fury>=2.1.0",
+    "imageio>=2.38.1",
+    "imageio-ffmpeg>=0.8.1",
+    "nibabel>=5.5.0",
+    "numpy>=2.5.4",
+]
+
+[project.scripts]
+tractwise = "tractwise.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
